@@ -1,0 +1,96 @@
+/*HEADER*/
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    text-shadow:: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.aheader {
+	text-decoration: none;
+	color: white;
+    font-size: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em
+	
+}
+
+a:hover {
+	color: #00FFFB;
+}
+
+/*INDEX*/
+.bodyindex
+{
+    margin: 0;
+}
+.h1index
+{
+    color: white;
+    font-size: 80px;
+    text-shadow: black 100px;
+    text-align: center;
+
+
+}
+
+.sectionindex
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/index.jpg);
+    background-size: cover;
+}
+
+/*INSCRIPTION*/
+
+.bodyinscription 
+{
+    background-image: url(images/index.jpg);
+    background-size: cover;  
+}
+.forminsc
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;    
+
+}
+
+.tailleinput
+{
+    width: 250px;
+	height: 35px;
+	border: 0px;
+	padding-left: 20px;
+	background-color: #EAEAEA;
+}
+
+.Validerinscript
+{
+    background-color: black;
+	width: 200px;
+	height: 35px;
+	border-radius: 20px;
+	border-color: grey;
+	color: white;
+	font-size: 12px;
+	transition: all 0.2s ease;
+	box-shadow: 0px 1px 5px #323232;
+	
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.Validerinscript:hover
+{
+    transform:scale(1.2);
+}
+
+
