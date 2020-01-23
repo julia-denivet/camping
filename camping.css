@@ -57,7 +57,12 @@ a:hover {
 {
 	display: flex;
 	flex-direction: column;
-	align-items: center;    
+    align-items: center; 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -67,7 +72,8 @@ a:hover {
 	height: 35px;
 	border: 0px;
 	padding-left: 20px;
-	background-color: #EAEAEA;
+    background-color: #EAEAEA;
+    border-radius: 20px;
 }
 
 .Validerinscript
@@ -93,4 +99,88 @@ a:hover {
     transform:scale(1.2);
 }
 
+.inscription
+{
+  color: azure;
+  text-shadow: 3px 5px 2px #474747;
+  transition: transform .2s; /* Animation */
+}
+
+.inscription:hover
+{
+    transform: scale(1.5); 
+}
+
+/*CONNEXION*/ 
+.bodyco
+{
+    margin: 0;
+    background-image: url(images/ii.jpg);
+    background-size: 1921px;
+  
+     
+}
+
+.formco
+{
+    
+	display: flex;
+	flex-direction: column;
+    align-items: center; 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.sectionco
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.Validerco
+{
+    
+    background-color: black;
+	width: 200px;
+	height: 35px;
+	border-radius: 20px;
+	border-color: grey;
+	color: white;
+	font-size: 12px;
+	transition: all 0.2s ease;
+    box-shadow: 0px 1px 5px #323232;
+    margin-top: 15px;
+	
+	animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.Validerco:hover
+{
+    transform:scale(1.2);
+}
+
+.h1co
+{
+    color: azure;
+    text-shadow: 3px 5px 2px #474747;
+    transition: transform .2s; /* Animation */
+}
+
+.h1co:hover
+{
+    transform: scale(1.5); 
+}
 

@@ -10,7 +10,7 @@
 <title>Document sans nom</title>
 </head>
 
-<body>
+<body class="bodyco">
     <header>
             <nav>
                 <ul>
@@ -35,37 +35,46 @@
                 </ul>
             </nav>
     </header>
-    <form>
-        <input type="text" name="login" placeholder="login"><br/>
-        <input type="password" name="password" placeholder="password"<br/>        
-        <input type="submit" name="Valider">    
-    </form>
+    <section class="sectionco">
+        <form method="post" class="formco">
+            <h1 class="h1co">Connexion</h1>
+            <input class="tailleinput" type="text" name="login" placeholder="login"><br/>
+            <input class="tailleinput" type="password" name="password" placeholder="password"<br/>        
+            <input class="Validerco" type="submit" name="Valider">    
+         </form>
+    </section>
+    
     <?php
         if (isset($_POST['Valider']))
             {
-              if (!empty($_POST['login'])&&!empty($_POST['password'])) 
-              {
-                  $connexion = mysqli_connect("localhost","root","","camping");
-                  $sql = "SELECT*FROM utilisateurs WHERE login='".$_POST['login']."'";
-                  $req = mysqli_query($connexion, $sql);
-                  $data = mysqli_fetch_all($req);
+                $login = $_POST['login'];
+                $password = $_POST ['password'];
+                
+                
+                if ($login && $password)
+                    {
+                        $connect = mysqli_connect('localhost','root','', 'camping') or die ('Error');
+                        $query = "SELECT*FROM utilisateurs WHERE login = '".$login."'";
+                        $reg = mysqli_query ($connect,$query);
+                        /*permet de lire/retourner une ligne du tableau, la première par défaut*/
+                        $rows = mysqli_fetch_assoc($reg);
 
-                  if (password_verify($_POST['password'], $data['password'])) 
-                  {
-                     $_SESSION['login'] = $_POST['login'];
-                     $_SESSION['password'] = $_POST['passe'];
-                     header('Location: index.php');
-                  }
-                  else {
-                      echo "Mauvais login / mot de passe incorrect."
-                  }
-                  mysqli_close($connexion);
-              }
-              else {
-                  echo "Remplissez tous les champs pour vous connecter ! "
-              }
-            }
+                        if ($login == $rows ['login'])
+                        {
+                            if (password_verify($_POST['password'],$rows['password']))
+                            {	
+                                session_start();
+                                $_SESSION['login']=$login;
+                                $_SESSION['password']=$password;
+                                $_SESSION['id']=$rows['id'];
+                                header('location: index.php');
+
+                            } else echo "<p class = 'alertconnexion'>mot de passe incorrect</p>";
+
+                        } else echo "<p class='alertconnexion'>Login ou Mot de passe incorrect</p>";
+
+                    } else echo "<p class='alertconnexion'>Veuillez saisir tous les champs</p>";
+                }
 	?>
-   
 
 </html>
