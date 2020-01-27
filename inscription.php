@@ -1,86 +1,55 @@
 <?php
-session_start();
 
-
+	session_start();
+	if(!isset($_SESSION['login']) || !isset($_SESSION['password'])){}
+	else
+	{
+		header('Location: index.php');
+	}
 ?>
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="camping.css">
-<title>Document sans nom</title>
-</head>
-
-<body class="bodyinscription">
-<header>
-        <nav>
-			<ul>
-                <li ><a class="aheader" href="index.php">Accueil</a></li>
-                <?php
-                if (isset($_SESSION['login'])) 
-                {
-                    echo  "<li ><a class='aheader' href='index.php'>Inscription</a></li>";
-
-                } 
-                else echo "<li ><a class='aheader' href='inscription.php'>Inscription</a></li>";
-                
-                ?>
-				<?php
-				if(isset($_SESSION['login']))
-				{
-				echo "<li ><a class='aheader' href='deconnexion.php'>Déconnexion</a></li>";
-				
-				} else echo "<li ><a class='aheader' href='connexion.php'>Connexion</a></li>";
-				?>
-				<li ><a class="aheader" href="reservation.php">Reservation</a></li>
-			</ul>
-		</nav>
-</header>
-		<form method="post" action="inscription.php" class="forminsc">
-			<h1 class="inscription">Inscription</h1>
-            <input type="text" name="login" class="tailleinput"  placeholder="Login"><br/>
-            <input type="text" name="nom" class="tailleinput"placeholder="Nom"><br/>
-            <input type="text" name="prenom" class="tailleinput" placeholder="Prenom"><br/>
-            <input type="text" name="mail" class="tailleinput" placeholder="Mail"><br/>
-			<input type="password" name="password" class="tailleinput" placeholder="Mot de passe"><br/>
-			<input type="password" name="confirmpassword" class="tailleinput" placeholder="Confirmer le mot de passe"><br/><br/>
-			<input type="submit" value="Valider" name="submit" class="Validerinscript">
-		</form>
-        <?php
-		if (isset($_POST['submit']))
-		{
-			$login = $_POST['login'];
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css"/>
+		<title>Inscription - Camping</title>
+	</head>
+	
+	<body>
+		<header id="header">
+			<?php
+				include("header.php");
+			?>
+		</header>
+		
+		<main id="inscription">
+			<section id="inscription_form">
+				<div id="inscription_form_opacite">
+					<form method="post" enctype="multipart/form-data">
+						<input type="text" name="login" class="inscription_2" placeholder="LOGIN"/>
+						<input type="mail" name="email" class="inscription_2" placeholder="E-MAIL"/>
+						<input type="text" name="prenom" class="inscription_2" placeholder="PRENOM"/>
+						<input type="text" name="nom" class="inscription_2" placeholder="NOM"/>
+						<input type="password" name="passe" class="inscription_2" placeholder="MOT DE PASSE"/>
+						<input type="password" name="passe2" class="inscription_2" placeholder="CONFIRMATION MOT DE PASSE"/>
+						<div class="inscription_2">
+							<input type="file" id="inscription_img" name="image" accept="image/png, image/jpeg, image/jpg">
+						</div>
+						<input type="submit" value="INSCRIPTION" name="inscription" class="inscription_2"/>
+						<a id="inscription_3" href="connexion.php">CONNEXION</a>
+						<?php
+							include("verification/verif-inscription.php");
+						?>
+					</form>
+				</div>
+			</section>
+		</main>
 			
-			$confirmpassword = $_POST['confirmpassword'];
-			
-			if ($login && $_POST['password'] && $_POST['confirmpassword'])
-			{
-				if ($_POST['password']== $_POST['confirmpassword'])
-				{
-					
-                    $connexion = mysqli_connect('localhost','root','','camping');
-					$requete = "SELECT * FROM utilisateurs WHERE login='".$login."'";
-					$query = mysqli_query($connexion, $requete);
-					$rows = mysqli_num_rows($query);
-
-					
-					if ($rows==0)
-					{
-                        $mdp = password_hash($_POST['password'], PASSWORD_BCRYPT,array ('cost'=> 12));
-                        $nom = $_POST['nom'];
-                        $prenom = $_POST['prenom'];
-                        $mail = $_POST['mail'];
-                        $requete2 = "INSERT INTO utilisateurs (nom, prenom, mail, login , password) VALUES ('$nom','$prenom', '$mail', '$login','$mdp')";
-						mysqli_query($connexion, $requete2);
-						mysqli_close($connexion);
-						header('location:connexion.php');
-						
-					} else echo "Ce pseudo est indisponible";
-					
-				} else echo "Les deux mots de passe doivent être identiques";
-				
-			} else echo "Veuillez saisir tous les champs";
-		} 
-	?>
-</body>
+		<footer>
+			<?php
+				include("footer.php");
+			?>
+		</footer>
+	</body>
+>>>>>>> 33e7cceb46f151ea0de2f7d2302ff553a1fd163a
 </html>
