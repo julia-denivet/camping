@@ -6,7 +6,7 @@
 			if(isset($_SESSION['login']) || isset($_SESSION['password']))
 			{
 				echo '
-					<li><a id="co_deco_bouton" href="">RESERVATION</a></li>
+					<li><a id="co_deco_bouton" href="reservation.php">RESERVATION</a></li>
 					<li><a id="co_deco_bouton" href="profil.php">PROFIL</a></li>
 					<li><a id="co_deco_bouton" href="deconnexion.php">DECONNEXION</a></li>
 				';
