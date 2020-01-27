@@ -11,6 +11,7 @@
 			if(password_verify($_POST['passe'], $data['password']))
 			{
 				$_SESSION['login'] = $_POST['login'];
+				$_SESSION['password'] = $_POST['passe'];
 				$_SESSION['id'] = $data['id'];
 				header('Location: index.php');
 			}

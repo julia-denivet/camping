@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if(isset($_SESSION['login']) || isset($_SESSION['password'])){}
+	else
+	{
+		header('Location: index.php');
+	}
+?>
 <!doctype html>
 <html>
 	<head>
@@ -14,8 +22,9 @@
 		</header>
 		
 		<main id="reservation">
-			 <?php
 			
+			<?php
+				include("verification/verif-reservation.php");
 			?>
 		</main>
 		
