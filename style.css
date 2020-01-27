@@ -16,8 +16,8 @@
 	}
 
 	@font-face{
-		font-family: Great Wishes;
-		src: url("Police/Great Wishes.otf")
+		font-family: GeosansLight;
+		src: url("Police/geo_sans_light/GeosansLight.ttf")
 	}
 
 	@font-face{
@@ -164,9 +164,9 @@
 	}
 
 	.inscription_2{
-		width: 80%;
+		width: 40%;
 		padding: 15px;
-		margin: 20px;
+		margin: 2%;
 		font-size: 1.2vw;
 		background-color: #556B2F;
 		font-family: Robota;
@@ -180,9 +180,9 @@
 	}
 
 	#inscription_3{
-		width: 80%;
+		width: 87%;
 		padding: 15px;
-		margin: 20px;
+		margin: 2%;
 		font-size: 1.2vw;
 		background-color: #445525;
 		font-family: Robota;
@@ -353,4 +353,85 @@
 		border: 0;
 		color: #FFFFFF;
 		box-sizing: content-box;
+	}
+
+/* CONTACT */
+
+	#contact{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		width: 100vw;
+		height: 85vh;
+		background-image: url("Images/IMG_1962.jpg");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	#contact_section_blanc{
+		background-color: #556B2F;
+		width: 50%;
+		text-align: center;
+		padding: 20px 10px;
+		box-shadow: 0 0 10px #3E3E3E;
+	}
+	
+	#contact fieldset{
+		border: 1px solid #FFFFFF;
+		margin: 10px;
+		width: 90%;
+	}
+	
+	#contact legend{
+		font-size: 2vw;
+		font-family: Robota;
+		color: #FFFFFF;
+	}
+
+	#contact #contact_form{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		width: 100%;
+	}
+
+	#contact ::placeholder{
+		color: #FFFFFF;
+	}
+
+	#contact input[type=text], textarea{
+		border: 0;
+		padding: 1vh;
+		width: 90%;
+		margin: 10px 0;
+		font-size: 18px;
+		color: #FFFFFF;
+		background-color: #445525;
+		font-family: GeosansLight;
+	}
+
+	#contact textarea{
+		height: 15vh;
+	}
+
+	#contact #button{
+		padding: 10px;
+		background-color: #445525;
+		font-size: 20px;
+		width: 90%;
+		margin: 10px 0;
+		color: #FFFFFF;
+		font-family: GeosansLight;
+		box-sizing: content-box;
+		cursor: pointer;
+		border: 0;
+	}
+
+	#contact .message_contact{
+		font-size: 20px;
+		color: #FFFFFF;
+		font-family: GeosansLight;
 	}
