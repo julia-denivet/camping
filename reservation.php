@@ -14,7 +14,9 @@
 		</header>
 		
 		<main id="reservation">
-			 
+			 <?php
+			
+			?>
 		</main>
 		
 		<footer>
