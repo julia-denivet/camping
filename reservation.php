@@ -22,13 +22,14 @@
 		</header>
 		
 		<main id="reservation">
-			<section id="reservation_form">
+			<section id="reservation_affichage">
 				<section id="reservation_affichage_header">
-					<div>ARRIVEE</div>
-					<div>DEPART</div>
-					<div>LIEU</div>
-					<div>OPTION</div>
-					<div>PRIX</div>
+					<div class="reservation_affichage_compartiment">ARRIVEE</div>
+					<div class="reservation_affichage_compartiment">DEPART</div>
+					<div class="reservation_affichage_compartiment">TYPE</div>
+					<div class="reservation_affichage_compartiment">LIEU</div>
+					<div class="reservation_affichage_compartiment">OPTION</div>
+					<div class="reservation_affichage_compartiment">PRIX</div>
 				</section>
 				
 				<?php
@@ -38,16 +39,17 @@
 
 					while($donnees = mysqli_fetch_array($resultat))
 					{
-						echo '<section id="reservation_affichage_header">';
-							echo '<div>', $donnees['arrive'], '</div>';
-							echo '<div>', $donnees['depart'], '</div>';
-							echo '<div>', $donnees['lieu'], '</div>';
-							echo '<div>';
-								if($donnees['electrique'] == 'on'){echo 'Borne électrique';}
-								if($donnees['disco'] == 'on'){echo 'Club Disco';}
-								if($donnees['activites'] == 'on'){echo 'Activités';}
+						echo '<section id="reservation_affichage_reservation">';
+							echo '<div class="reservation_affichage_compartiment">', $donnees['arrive'], '</div>';
+							echo '<div class="reservation_affichage_compartiment">', $donnees['depart'], '</div>';
+							echo '<div class="reservation_affichage_compartiment">', $donnees['type'], '</div>';
+							echo '<div class="reservation_affichage_compartiment">', $donnees['lieu'], '</div>';
+							echo '<div class="reservation_affichage_compartiment">';
+								if($donnees['electrique'] == 'on'){echo '<div>Borne électrique</div>';}
+								if($donnees['disco'] == 'on'){echo '<div>Club Disco</div>';}
+								if($donnees['activites'] == 'on'){echo '<div>Activités</div>';}
 							echo '</div>';
-							echo '<div>', $donnees['prix'], '€</div>';
+							echo '<div class="reservation_affichage_compartiment">', $donnees['prix'], '€</div>';
 						echo '</section>';
 					}
 				?>
@@ -60,16 +62,16 @@
 						<fieldset><legend>EMPLACEMENT</legend>
 							<select name="emplacement" class="reservation_form_css">
 								<option value="">--Type d'emplacement--</option>
-								<option value="tente">Tente</option>
-								<option value="campingcar">Camping car</option>
+								<option value="Tente">Tente</option>
+								<option value="Camping Car">Camping car</option>
 							</select>
 						</fieldset>
 						<fieldset><legend>LIEUX</legend>
 							<select name="lieux" class="reservation_form_css">
 								<option value="">--Lieux--</option>
-								<option value="plage">La Plage</option>
-								<option value="pins">Les Pins</option>
-								<option value="marquis">Le Maquis</option>
+								<option value="La Plage">La Plage</option>
+								<option value="Les Pins">Les Pins</option>
+								<option value="Le Marquis">Le Maquis</option>
 							</select>
 						</fieldset>
 					</div>
@@ -95,7 +97,7 @@
 							</label>
 							<label for="activites">
 								<input type="checkbox" name="activites"/>
-								Activités Yoga, Frisbee et Ski Nautique +30€
+								Activités Yoga, Frisbee et Ski Nautique +30€ (par jour)
 							</label>
 						</div>
 					</fieldset>
