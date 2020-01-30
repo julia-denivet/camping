@@ -18,7 +18,7 @@
 		
 		<main id="accueil">
 			<h1>LE CAMPING DES HAPPY SARDINES</h1>
-			<h2>RESERVATION</h2>
+			<h2><a href="reservation.php">RESERVATION</a></h2>
 		</main>
 		
 		<footer>

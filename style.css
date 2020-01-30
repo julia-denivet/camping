@@ -100,11 +100,15 @@
 	}
 
 	#accueil h2{
-		color: #FFFFFF;
 		font-size: 40px;
 		font-family: Robota;
 		background-color: rgba(0,0,0,0.8);
 		padding: 25px 25px 15px 25px;
+	}
+	
+	#accueil h2 a{
+		text-decoration: none;
+		color: #FFFFFF;
 	}
 
 /* INSCRIPTION */
@@ -387,13 +391,13 @@
 			overflow: auto;
 		}
 		
-		#reservation_affichage ::-webkit-scrollbar
+		::-webkit-scrollbar
 		{
 			width: 10px;
 			background-color: #000000;
 		}
 		
-		#reservation_affichage ::-webkit-scrollbar-thumb
+		::-webkit-scrollbar-thumb
 		{
 			border-radius: 10px;
 			background-color: #555;

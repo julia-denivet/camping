@@ -71,7 +71,7 @@
 								<option value="">--Lieux--</option>
 								<option value="La Plage">La Plage</option>
 								<option value="Les Pins">Les Pins</option>
-								<option value="Le Marquis">Le Maquis</option>
+								<option value="Le Maquis">Le Maquis</option>
 							</select>
 						</fieldset>
 					</div>
