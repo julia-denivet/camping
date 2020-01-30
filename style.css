@@ -1,0 +1,592 @@
+/* GENERAL */
+
+	html{
+		margin: 0;
+	}
+
+	body{
+		margin: 0;
+	}
+
+	#background_accueil{
+		background-image: url("Images/Nature-landscape-forest-river-top-view_1920x1200-2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	@font-face{
+		font-family: GeosansLight;
+		src: url("Police/geo_sans_light/GeosansLight.ttf")
+	}
+
+	@font-face{
+		font-family: Robota;
+		src: url("Police/robota/Robota-NonCommercial.otf")
+	}
+
+	/* HEADER */
+
+		#header_accueil{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			width: 100vw;
+			height: 22vh;
+		}
+
+		#header_accueil #logo{
+			height: 20vh;
+		}
+
+		#header{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			width: 100vw;
+			height: 15vh;
+			background-color: #556B2F;
+		}
+
+		#header #logo{
+			height: 12vh;
+		}
+
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 5vh;
+		}
+
+		ul{
+			display: flex;
+			flex-direction: row;
+			margin: 0;
+			padding: 0;
+		}
+
+		li{
+			list-style: none;
+			padding: 0 20px;
+		}
+
+		li a{
+			text-decoration: none;
+			color: #FFFFFF;
+			font-size: 25px;
+			font-family: Robota;
+		}
+
+/* ACCUEIL */
+
+	#accueil{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		width: 100vw;
+		height: 78vh;
+		text-align: center;
+	}
+
+	#accueil h1{
+		color: #FFFFFF;
+		font-size: 80px;
+		font-family: Robota;
+		text-shadow: 0 0 10px #000000;
+	}
+
+	#accueil h2{
+		font-size: 40px;
+		font-family: Robota;
+		background-color: rgba(0,0,0,0.8);
+		padding: 25px 25px 15px 25px;
+	}
+	
+	#accueil h2 a{
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+/* INSCRIPTION */
+
+	#inscription{
+		width: 100vw;
+		height: 85vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: Robota;
+		background-image: url("Images/Nature-landscape-forest-river-top-view_1920x1200-2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#inscription #inscription_form{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 99vw;
+		height: 85vh;
+	}
+
+	#inscription #inscription_form_opacite{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 60vw;
+		padding: 50px;
+		text-align: center;
+		background-color: rgba(0,0,0, .5);
+	}
+
+	#inscription form{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.inscription_form_partie{
+		width: 44.5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#inscription input[type=submit]{
+		cursor: pointer;
+	}
+
+	.inscription_2{
+		width: 40%;
+		padding: 15px;
+		margin: 2%;
+		font-size: 1.2vw;
+		background-color: #556B2F;
+		font-family: Robota;
+		color: #FFFFFF;
+		box-sizing: content-box;
+		border: 0;
+	}
+
+	#inscription ::placeholder{
+		color: #FFFFFF;
+	}
+
+	#inscription_3{
+		width: 87%;
+		padding: 15px;
+		margin: 2%;
+		font-size: 1.2vw;
+		background-color: #445525;
+		font-family: Robota;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-align: center;
+	}
+
+/* CONNEXION */
+
+	#connexion{
+		width: 100vw;
+		height: 85vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: Robota;
+		background-image: url("Images/Nature-landscape-forest-river-top-view_1920x1200-2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#connexion #connexion_form{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 99vw;
+		height: 85vh;
+	}
+
+	#connexion #connexion_form_opacite{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 50px;
+		text-align: center;
+		background-color: rgba(0,0,0, .5);
+	}
+
+	#connexion form{
+		width: 40vw;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	#connexion input[type=submit]{
+		cursor: pointer;
+	}
+
+	.connexion_2{
+		width: 80%;
+		padding: 15px;
+		margin: 20px;
+		font-size: 1.2vw;
+		background-color: #556B2F;
+		font-family: Robota;
+		color: #FFFFFF;
+		box-sizing: content-box;
+		border: 0;
+	}
+
+	#connexion ::placeholder{
+		color: #FFFFFF;
+	}
+
+	#connexion_3{
+		width: 80%;
+		padding: 15px;
+		margin: 20px;
+		font-size: 1.2vw;
+		background-color: #445525;
+		font-family: Robota;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-align: center;
+	}
+
+/* COMPTE */
+
+	#compte{
+		width: 100vw;
+		height: 85vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-family: Robota;
+		background-image: url("Images/Nature-landscape-forest-river-top-view_1920x1200-2.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	#compte #compte_form{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 99vw;
+		height: 85vh;
+	}
+
+	#compte #compte_form_opacite{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 50px;
+		text-align: center;
+		background-color: rgba(0,0,0, .5);
+	}
+
+	#compte form{
+		width: 60vw;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#compte input[type=submit]{
+		cursor: pointer;
+	}
+
+	#compte_section_img{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	#compte #compte_div_img{
+		width: 10vw;
+		height: 10vw;
+		margin: 20px;
+		border-radius: 10vw;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#compte #compte_img_label{
+		cursor: pointer;
+		height: 10vw;
+	}
+
+	#compte #compte_img{
+		height: 10vw;
+	}
+
+	#compte #compte_img_file{
+		display: none;
+	}
+
+	.compte_2{
+		width: 40%;
+		padding: 15px;
+		margin: 20px;
+		font-size: 1.2vw;
+		background-color: #556B2F;
+		font-family: Robota;
+		border: 0;
+		color: #FFFFFF;
+		box-sizing: content-box;
+	}
+
+/* RESERVATION */
+
+	#reservation{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		background-image: url("Images/Nature-landscape-forest-river-top-view_1920x1200-2.jpg");
+		background-position: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	/* RESERVATION AFFICHAGE */
+
+		#reservation_affichage{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 70%;
+			height: 40vh;
+			padding: 20px;
+			margin: 20px;
+			background-color: rgba(0,0,0,0.80);
+			color: #FFFFFF;
+			text-align: center;
+			font-family: GeosansLight;
+			font-size: 18px;
+			overflow: auto;
+		}
+		
+		::-webkit-scrollbar
+		{
+			width: 10px;
+			background-color: #000000;
+		}
+		
+		::-webkit-scrollbar-thumb
+		{
+			border-radius: 10px;
+			background-color: #555;
+		}
+
+		#reservation_affichage_header{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
+			border-bottom: 1px solid #FFFFFF;
+		}
+
+		#reservation_affichage_reservation{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
+		}
+
+		.reservation_affichage_compartiment{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 14%;
+			padding: 1%;
+		}
+
+	/* RESERVATION FORM */
+
+		#reservation_form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 70%;
+			padding: 20px;
+			margin: 20px;
+			background-color: rgba(0,0,0,0.80);
+			color: #FFFFFF;
+			text-align: center;
+			font-family: GeosansLight;
+			font-size: 18px;
+		}
+
+		#reservation_form h1{
+			font-family: Robota;
+			font-size: 40px;
+			margin: 15px;
+		}
+
+		#reservation_form form{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
+
+		#reservation_form fieldset{
+			border: 1px solid #FFFFFF;
+			width: 95%;
+			padding: 1.5%;
+			margin: 10px 0;
+		}
+
+		#reservation_form legend{
+			font-size: 35px;
+			font-family: Robota;
+			color: #FFFFFF;
+		}
+
+		#reservation_form .double_fieldset{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			text-align: center;
+			width: 98%;
+		}
+
+		#reservation_form .double_fieldset fieldset{
+			width: 46%;
+		}
+
+		#reservation_form #option{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#reservation_form .reservation_form_css{
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			box-sizing: content-box;
+   			border-radius: 0;
+			border: 0;
+			padding: 10px;
+			width: 90%;
+			font-size: 18px;
+			color: #FFFFFF;
+			background-color: #556B2F;
+			font-family: GeosansLight;
+		}
+
+		#reservation_form_validation{
+			display: block;
+			width: 98%;
+    		padding: 1.5%;
+			border: 1px solid #FFFFFF;
+			margin: 20px;
+			background-color: #556B2F;
+			font-family: GeosansLight;
+			font-size: 18px;
+			color: #FFFFFF;
+		}
+
+/* CONTACT */
+
+	#contact{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		width: 100vw;
+		height: 85vh;
+	}
+
+	#contact_section_blanc{
+		background-color: #556B2F;
+		width: 50%;
+		text-align: center;
+		padding: 20px 10px;
+		box-shadow: 0 0 10px #3E3E3E;
+	}
+	
+	#contact fieldset{
+		border: 1px solid #FFFFFF;
+		margin: 10px;
+		width: 90%;
+	}
+	
+	#contact legend{
+		font-size: 2vw;
+		font-family: Robota;
+		color: #FFFFFF;
+	}
+
+	#contact #contact_form{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		width: 100%;
+	}
+
+	#contact ::placeholder{
+		color: #FFFFFF;
+	}
+
+	#contact input[type=text], textarea{
+		border: 0;
+		padding: 10px;
+		width: 90%;
+		margin: 10px 0;
+		font-size: 18px;
+		color: #FFFFFF;
+		background-color: #445525;
+		font-family: GeosansLight;
+	}
+
+	#contact textarea{
+		height: 15vh;
+	}
+
+	#contact #button{
+		padding: 10px;
+		background-color: #445525;
+		font-size: 20px;
+		width: 90%;
+		margin: 10px 0;
+		color: #FFFFFF;
+		font-family: GeosansLight;
+		box-sizing: content-box;
+		cursor: pointer;
+		border: 0;
+	}
+
+	#contact .message_contact{
+		font-size: 20px;
+		color: #FFFFFF;
+		font-family: GeosansLight;
+	}
