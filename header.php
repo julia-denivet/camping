@@ -5,6 +5,10 @@
 		<?php
 			if(isset($_SESSION['login']) || isset($_SESSION['password']))
 			{
+				if($_SESSION['login']  == 'admin')
+				{
+					echo '<li><a id="co_deco_bouton" href="admin.php">ADMIN</a></li>';
+				}
 				echo '
 					<li><a id="co_deco_bouton" href="reservation.php">RESERVATION</a></li>
 					<li><a id="co_deco_bouton" href="profil.php">PROFIL</a></li>
